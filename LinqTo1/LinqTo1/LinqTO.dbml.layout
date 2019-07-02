@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LinqTO">
+  <DataContextMoniker Name="/LinqTODataContext" />
+  <nestedChildShapes>
+    <classShape Id="f8ff8357-5ede-42af-a34b-b6b275c10467" absoluteBounds="4.125, 2.5, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/LinqTODataContext/Der" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37dbd813-5563-480c-a281-651cad695fc9" absoluteBounds="4.14, 2.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c6c467f-fef5-4279-8e43-62b9282e034b" absoluteBounds="0.5, 4.375, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/LinqTODataContext/Veli" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc09cc0b-42e3-48ee-8bb4-3e4759c51bf6" absoluteBounds="0.51500000000000012, 4.8350000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b360f199-208f-47fc-a1d2-84ae16913282" absoluteBounds="0.5, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/LinqTODataContext/Ogrenci" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7df82443-27f8-4823-886e-bd6d3e3060ab" absoluteBounds="0.51499999999999968, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66753754-ac28-4119-adec-6c759f051bc3" absoluteBounds="3.875, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/LinqTODataContext/OgrenciDer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4986ca17-4577-4b66-9ec4-166cf571def2" absoluteBounds="3.8900000000000006, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f439aca4-4e5f-4269-ba9d-6147c90c7093" absoluteBounds="4, 4.375, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/LinqTODataContext/Ogretmen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0546e67-141b-464d-ae09-961a1441b1a2" absoluteBounds="4.0150000000000006, 4.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 4.375); (1.5 : 3.03049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqTODataContext/Veli/Veli_Ogrenci" />
+      <nodes>
+        <classShapeMoniker Id="9c6c467f-fef5-4279-8e43-62b9282e034b" />
+        <classShapeMoniker Id="b360f199-208f-47fc-a1d2-84ae16913282" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 2.5); (5 : 1.94399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinqTODataContext/Der/Der_OgrenciDer" />
+      <nodes>
+        <classShapeMoniker Id="f8ff8357-5ede-42af-a34b-b6b275c10467" />
+        <classShapeMoniker Id="66753754-ac28-4119-adec-6c759f051bc3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 1.40949625651042); (3.875 : 1.40949625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinqTODataContext/Ogrenci/Ogrenci_OgrenciDer" />
+      <nodes>
+        <classShapeMoniker Id="b360f199-208f-47fc-a1d2-84ae16913282" />
+        <classShapeMoniker Id="66753754-ac28-4119-adec-6c759f051bc3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.0625 : 3.8862939453125); (5.0625 : 4.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqTODataContext/Der/Der_Ogretmen" />
+      <nodes>
+        <classShapeMoniker Id="f8ff8357-5ede-42af-a34b-b6b275c10467" />
+        <classShapeMoniker Id="f439aca4-4e5f-4269-ba9d-6147c90c7093" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

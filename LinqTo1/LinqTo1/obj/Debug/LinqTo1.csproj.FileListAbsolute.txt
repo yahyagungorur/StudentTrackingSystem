@@ -1,0 +1,10 @@
+c:\users\yahya\documents\visual studio 2015\Projects\LinqTo1\LinqTo1\bin\Debug\LinqTo1.exe.config
+c:\users\yahya\documents\visual studio 2015\Projects\LinqTo1\LinqTo1\bin\Debug\LinqTo1.exe
+c:\users\yahya\documents\visual studio 2015\Projects\LinqTo1\LinqTo1\bin\Debug\LinqTo1.pdb
+c:\users\yahya\documents\visual studio 2015\Projects\LinqTo1\LinqTo1\obj\Debug\LinqTo1.csprojResolveAssemblyReference.cache
+c:\users\yahya\documents\visual studio 2015\Projects\LinqTo1\LinqTo1\obj\Debug\LinqTo1.Form1.resources
+c:\users\yahya\documents\visual studio 2015\Projects\LinqTo1\LinqTo1\obj\Debug\LinqTo1.Properties.Resources.resources
+c:\users\yahya\documents\visual studio 2015\Projects\LinqTo1\LinqTo1\obj\Debug\LinqTo1.csproj.GenerateResource.Cache
+c:\users\yahya\documents\visual studio 2015\Projects\LinqTo1\LinqTo1\obj\Debug\LinqTo1.exe
+c:\users\yahya\documents\visual studio 2015\Projects\LinqTo1\LinqTo1\obj\Debug\LinqTo1.pdb
+C:\Users\YAHYA\documents\visual studio 2015\Projects\LinqTo1\LinqTo1\obj\Debug\LinqTo1.Form2.resources

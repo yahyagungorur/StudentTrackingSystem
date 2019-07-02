@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="OkulSistemi" Class="LinqTODataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-GOCT41U;Initial Catalog=OkulSistemi;Integrated Security=True" SettingsObjectName="LinqTo1.Properties.Settings" SettingsPropertyName="OkulSistemiConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Ders" Member="Ders">
+    <Type Name="Der">
+      <Column Name="DersId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Adi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Saati" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="Der_OgrenciDer" Member="OgrenciDers" ThisKey="DersId" OtherKey="DersID" Type="OgrenciDer" />
+      <Association Name="Der_Ogretmen" Member="Ogretmens" ThisKey="DersId" OtherKey="DersID" Type="Ogretmen" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Veli" Member="Velis">
+    <Type Name="Veli">
+      <Column Name="VeliId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VAdi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Soyadi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Adresi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelNo" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Association Name="Veli_Ogrenci" Member="Ogrencis" ThisKey="VeliId" OtherKey="VeliID" Type="Ogrenci" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ogrenci" Member="Ogrencis">
+    <Type Name="Ogrenci">
+      <Column Name="OgrenciId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TCKN" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="Adi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Soyadi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OkulNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DogumTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="VeliID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Ogrenci_OgrenciDer" Member="OgrenciDers" ThisKey="OgrenciId" OtherKey="OgrenciID" Type="OgrenciDer" />
+      <Association Name="Veli_Ogrenci" Member="Veli" ThisKey="VeliID" OtherKey="VeliId" Type="Veli" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OgrenciDers" Member="OgrenciDers">
+    <Type Name="OgrenciDer">
+      <Column Name="OgrenciID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DersID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Der_OgrenciDer" Member="Der" ThisKey="DersID" OtherKey="DersId" Type="Der" IsForeignKey="true" />
+      <Association Name="Ogrenci_OgrenciDer" Member="Ogrenci" ThisKey="OgrenciID" OtherKey="OgrenciId" Type="Ogrenci" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ogretmen" Member="Ogretmens">
+    <Type Name="Ogretmen">
+      <Column Name="OgretmenId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Adi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Soyadi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DersID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DogumTarihi" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AktifMi" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Der_Ogretmen" Member="Der" ThisKey="DersID" OtherKey="DersId" Type="Der" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
